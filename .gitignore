@@ -3,6 +3,10 @@
 
 # IntelliJ IDEA
 .idea/
+*.iml
+
+# Maven
+target/
 
 # Compiled class file
 *.class

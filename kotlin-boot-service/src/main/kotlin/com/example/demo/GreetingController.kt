@@ -10,8 +10,13 @@ class GreetingController {
 
     val counter = AtomicLong()
 
+    @GetMapping("/hello")
+    fun helloWorld() =
+            Greeting(counter.incrementAndGet(), "Hello world")
+
     @GetMapping("/greeting")
     fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String) =
             Greeting(counter.incrementAndGet(), "Hello, $name")
+
 
 }
